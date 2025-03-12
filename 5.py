@@ -4,11 +4,14 @@ minimum = 39
 detal = str(input('Название детали '))
 print('Проверка наличия на складе', detal)
 while slovar[detal]<minimum:
+#if  slovar[detal]<minimum:
     proc=str(input('Заказать деталь да или нет'))
     if proc=="да":
         print('Заказываем запчасти', detal)
-        slovar[detal]+=1
+        slovar[detal] += (minimum-slovar[detal])
         print(slovar)
-    elif proc =="нет":
+    else :#proc =="нет":
         print("Отмена заказа деталей", detal)
+#else:
+   # print("Деталей достаточно", slovar[detal]
 print('Выход из заказа')
